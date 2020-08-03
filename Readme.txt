@@ -13,6 +13,7 @@ Design decisions
 3. If all 4 retries fail then no further action is taken as later recovery process is out of the scope of this simple implementation
 4. Due to the simplicity of the data models the same model classes are used for requests and responses.
 5. Rest endpoints have been reused from the client implementation
+6. Body md5 signature is sent in the header portion as the header object seems to contain attributes of the body. It is not sent as a http request header as it is not the md5 hash of the whole body
 
 
 Sample usage
